@@ -4,7 +4,7 @@ import reactLogo from "./assets/react.svg";
 import "./App.css";
 
 //* ----------import component and pages -------------------------
-import { Home } from "./pages";
+import { Editor, Home } from "./pages";
 import { Navbar } from "./components";
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
       <section>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/editor" element={<Editor />} />
         </Routes>
       </section>
     </div>
