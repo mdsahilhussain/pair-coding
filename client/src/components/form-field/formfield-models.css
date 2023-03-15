@@ -12,9 +12,43 @@
 .formField___Image {
   width: 30%;
   height: auto;
+
+  position: relative;
 }
+
+.celebration {
+  position: absolute;
+  z-index: -1;
+
+  width: 90%;
+  height: auto;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .formField___Image > img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+.formField___create--newroom {
+  margin-top: 1em;
+  color: var(--textColor);
+
+  display: flex;
+  align-items: center;
+}
+
+.formField___create--newroom p {
+  margin-right: 0.3em;
+}
+
+.formField___create--newroom a {
+  font-style: oblique;
+  color: var(--bgColor);
+  font-weight: 700;
+
+  text-decoration: underline;
 }
