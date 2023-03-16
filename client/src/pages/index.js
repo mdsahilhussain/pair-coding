@@ -1,4 +1,4 @@
 import Home from "./home/Home";
-import Editor from "./editor/Editor";
+import EditorPage from "./editor-page/EditorPage";
 
-export { Home, Editor };
+export { Home, EditorPage };

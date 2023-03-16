@@ -1,10 +1,10 @@
 import React from "react";
 import { Button, EditorNavbar } from "../../components";
 import { useLocation } from "react-router-dom";
-import "./editor-models.css";
+import "./editor-page-models.css";
 
 import logoImage from "../../assets/logo.png";
-const Editor = ({ setMode }) => {
+const EditorPage = ({ setMode }) => {
   const location = useLocation();
   const { username } = location?.state;
 
@@ -25,7 +25,7 @@ const Editor = ({ setMode }) => {
             <h4></h4>
           </div>
         </div>
-        <div className="editor___container--right___button" >
+        <div className="editor___container--right___button">
           <Button
             style={{
               padding: "0.8em 2em",
@@ -40,13 +40,13 @@ const Editor = ({ setMode }) => {
         </div>
       </aside>
       <section className="editor___container--left">
-        <section>
+        <nav>
           <EditorNavbar list={userList} setMode={setMode} />
-        </section>
+        </nav>
         <section></section>
       </section>
     </section>
   );
 };
 
-export default Editor;
+export default EditorPage;
