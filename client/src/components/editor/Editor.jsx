@@ -1,7 +1,7 @@
 import React from "react";
 import "./editor-models.css";
 const Editor = () => {
-  return <div>Editor</div>;
+  return <textarea id="#editor-container">Editor</textarea>;
 };
 
 export default Editor;

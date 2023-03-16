@@ -4,5 +4,6 @@ import FormField from "./form-field/FormField";
 import Toggle from "./toggle-button/Toggle";
 import ClientList from "./client-list/ClientList";
 import EditorNavbar from "./editor-navbar/EditorNavbar";
+import Editor from "./editor/Editor";
 
-export { Navbar, Button, FormField, Toggle, ClientList, EditorNavbar };
+export { Navbar, Button, FormField, Toggle, ClientList, EditorNavbar, Editor };

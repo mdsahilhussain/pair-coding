@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, EditorNavbar } from "../../components";
+import { Button, Editor, EditorNavbar } from "../../components";
 import { useLocation } from "react-router-dom";
 import "./editor-page-models.css";
 
@@ -40,10 +40,12 @@ const EditorPage = ({ setMode }) => {
         </div>
       </aside>
       <section className="editor___container--left">
-        <nav>
+        <section>
           <EditorNavbar list={userList} setMode={setMode} />
-        </nav>
-        <section></section>
+        </section>
+        <section>
+          <Editor />
+        </section>
       </section>
     </section>
   );

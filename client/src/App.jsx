@@ -4,7 +4,7 @@ import reactLogo from "./assets/react.svg";
 import "./App.css";
 
 //* ----------import component and pages -------------------------
-import { Editor, Home } from "./pages";
+import { EditorPage, Home } from "./pages";
 import { Navbar } from "./components";
 
 function App() {
@@ -23,7 +23,10 @@ function App() {
               </>
             }
           ></Route>
-          <Route path="/editor/:id" element={<Editor setMode={setMode} />} />
+          <Route
+            path="/editor/:id"
+            element={<EditorPage setMode={setMode} />}
+          />
         </Routes>
       </section>
     </div>
