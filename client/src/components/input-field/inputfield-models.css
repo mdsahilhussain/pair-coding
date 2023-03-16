@@ -14,10 +14,11 @@
   align-items: center;
 }
 
+/* Todo
 .inputField:focus {
   border: 1px solid transparent;
   background-color: transparent;
-}
+} */
 
 input {
   border: none;
@@ -26,7 +27,7 @@ input {
 
   background-color: transparent;
   color: var(--bgColor);
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 input::placeholder {
@@ -38,12 +39,8 @@ label {
   color: var(--textColor);
 }
 
-i {
+.inputField i {
   font-size: 1rem;
   font-weight: 500;
   color: var(--textColor);
-}
-
-i:focus {
-  color: var(--bgColor);
 }

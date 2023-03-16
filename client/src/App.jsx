@@ -12,11 +12,18 @@ function App() {
 
   return (
     <div className={`App ${mode ? "lightMode" : "dakeMode"}`}>
-      <Navbar setMode={setMode} />
+      {/* <Navbar setMode={setMode} /> */}
       <section>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/editor" element={<Editor />} />
+          <Route
+            path="/"
+            element={
+              <>
+                <Navbar setMode={setMode} />, <Home />
+              </>
+            }
+          ></Route>
+          <Route path="/editor/:id" element={<Editor setMode={setMode} />} />
         </Routes>
       </section>
     </div>

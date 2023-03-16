@@ -20,7 +20,7 @@
   position: absolute;
   z-index: -1;
 
-  width: 90%;
+  width: 100%;
   height: auto;
 
   left: 50%;
@@ -39,6 +39,32 @@
 
   display: flex;
   align-items: center;
+}
+
+.copy___clipbord {
+  padding: 0.3em 0.5em;
+  margin: 0.5em 0em;
+  border-radius: 5px;
+  border: 1px solid #FFA1AC;
+
+  background-color: #ffa1ac76;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copy___clipbord p {
+  font-size: 0.9rem;
+}
+
+.copy___clipbord i {
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.copy___clipbord i:active {
+  transform: scale(0.85);
 }
 
 .formField___create--newroom p {
