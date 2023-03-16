@@ -104,7 +104,9 @@ const FormField = () => {
     playerRef.current.play();
 
     setTimeout(() => {
-      navigate(`/editor/${fromData.password}`, { state: fromData.username });
+      navigate(`/editor/${fromData.password}`, {
+        state: { username: fromData.username },
+      });
     }, 3000);
   };
 

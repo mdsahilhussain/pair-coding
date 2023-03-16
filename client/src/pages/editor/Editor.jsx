@@ -1,12 +1,21 @@
 import React from "react";
-import { Button, Toggle } from "../../components";
+import { Button, EditorNavbar } from "../../components";
+import { useLocation } from "react-router-dom";
 import "./editor-models.css";
 
 import logoImage from "../../assets/logo.png";
 const Editor = ({ setMode }) => {
-  const modeHandler = () => {
-    setMode((preMode) => !preMode);
-  };
+  const location = useLocation();
+  const { username } = location?.state;
+
+  const userList = [
+    { socketId: "0", username: "m sahil hussain" },
+    { socketId: "1", username: "badal" },
+    { socketId: "2", username: "aman" },
+    { socketId: "3", username: "nivedita" },
+    { socketId: "3", username: "nivedita" },
+  ];
+
   return (
     <section className="editor___container">
       <aside className="editor___container--right">
@@ -16,7 +25,7 @@ const Editor = ({ setMode }) => {
             <h4></h4>
           </div>
         </div>
-        <div className="editor___container--right___button">
+        <div className="editor___container--right___button" >
           <Button
             style={{
               padding: "0.8em 2em",
@@ -31,22 +40,9 @@ const Editor = ({ setMode }) => {
         </div>
       </aside>
       <section className="editor___container--left">
-        <nav className="editor___container--navbar">
-          <div></div>
-          <div className="editor___container--navbar___buttons">
-            <Button
-              style={{
-                padding: "0.8em 2em",
-                marginRight: "1em",
-                fontSize: "0.8rem",
-                borderRadius: "5px",
-              }}
-              title="Run"
-              isBlueButton={true}
-            />
-            <Toggle Handler={modeHandler} />
-          </div>
-        </nav>
+        <section>
+          <EditorNavbar list={userList} setMode={setMode} />
+        </section>
         <section></section>
       </section>
     </section>
