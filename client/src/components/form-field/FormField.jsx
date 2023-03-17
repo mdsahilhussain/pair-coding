@@ -7,7 +7,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import animationData from "../../constants/confetti-full-screen.json";
 
 import Button from "../button/Button";
-import InputFiled from "../input-field/inputFiled";
+import InputFiled from "../input-field/InputFiled";
 
 import handeShakhImage from "../../assets/hand-shakh.png";
 import { Link, useNavigate } from "react-router-dom";

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./inputfield-models.css";
 import "remixicon/fonts/remixicon.css";
 const InputFiled = (props) => {
@@ -18,7 +18,7 @@ const InputFiled = (props) => {
       submitHandler();
     }
   };
-  
+
   return (
     <div className="formInput">
       <label>{label}</label>

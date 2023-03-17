@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;500;600;700;900&display=swap");
-
+@import 'codemirror/lib/codemirror.css';
+@import 'codemirror/theme/material.css';
 :root {
   --bgColor: #ffffff;
   --textColor: #03001c;

@@ -7,6 +7,7 @@ import logoImage from "../../assets/logo.png";
 const EditorPage = ({ setMode }) => {
   const location = useLocation();
   const { username } = location?.state;
+  console.log(username);
 
   const userList = [
     { socketId: "0", username: "m sahil hussain" },
@@ -22,7 +23,7 @@ const EditorPage = ({ setMode }) => {
         <div className="editor___container--right___image">
           <div>
             <img src={logoImage} alt="logoImage" />
-            <h4></h4>
+            <h4>Code Editor</h4>
           </div>
         </div>
         <div className="editor___container--right___button">

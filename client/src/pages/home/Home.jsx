@@ -32,7 +32,7 @@ const Home = () => {
 
     // Clean up the interval on unmount
     return () => clearInterval(interval);
-  }, []);
+  }, [imageArray.length]);
 
   const getEditorHandler = () => {
     if (isEditor === true) {
