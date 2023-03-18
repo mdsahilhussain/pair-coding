@@ -5,5 +5,17 @@ import Toggle from "./toggle-button/Toggle";
 import ClientList from "./client-list/ClientList";
 import EditorNavbar from "./editor-navbar/EditorNavbar";
 import Editor from "./editor/Editor";
+import FrontendEditor from "./all-editor/FrontendEditor";
+import CompilerEditor from "./all-editor/CompilerEditor";
 
-export { Navbar, Button, FormField, Toggle, ClientList, EditorNavbar, Editor };
+export {
+  Navbar,
+  Button,
+  FormField,
+  Toggle,
+  ClientList,
+  EditorNavbar,
+  Editor,
+  FrontendEditor,
+  CompilerEditor,
+};

@@ -1,4 +1,4 @@
-section.editor___container {
+section.editorPage___container {
   width: 100%;
   height: 100vh;
 
@@ -6,7 +6,7 @@ section.editor___container {
   align-items: center;
 }
 
-aside.editor___container--right {
+aside.editorPage___container--right {
   min-width: 180px;
   height: 100%;
 
@@ -20,7 +20,7 @@ aside.editor___container--right {
   background-color: var(--primaryColor);
 }
 
-.editor___container--right___image {
+.editorPage___container--right___top {
   width: 100%;
   height: fit-content;
 
@@ -29,12 +29,32 @@ aside.editor___container--right {
   justify-content: center;
 }
 
-.editor___container--right___image ~ img {
+.editorPage___container--right___top ~ img {
   width: 100%;
   height: 100%;
 }
 
-.editor___container--right___button {
+.editorPage___container--right___top--image {
+  align-items: center;
+  text-align: center;
+}
+
+.editorPage___container--right___top--list {
+  align-items: flex-start;
+  text-align: left;
+
+  margin-left: -1.5em;
+  margin-top: 2em;
+}
+
+.editorPage___container--right___top--list > li {
+  padding: 0.5em 0;
+  border-bottom: 1px solid #03001c50;
+
+  cursor: pointer;
+}
+
+.editorPage___container--right___button {
   width: 100%;
 
   display: flex;
@@ -42,9 +62,20 @@ aside.editor___container--right {
   align-items: flex-start;
 }
 
-section.editor___container--left {
+section.editorPage___container--left {
   flex: 1;
   height: 100%;
+
+  display: flex;
+  flex-direction: column;
 }
 
+.editorPage___container--left___nav {
+  width: 100%;
+  height: fit-content;
+}
 
+.editorPage___container--left___editor {
+  width: 100%;
+  height: 100%;
+}

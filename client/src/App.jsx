@@ -11,7 +11,6 @@ function App() {
 
   return (
     <div className={`App ${mode ? "lightMode" : "dakeMode"}`}>
-      {/* <Navbar setMode={setMode} /> */}
       <section>
         <Routes>
           <Route

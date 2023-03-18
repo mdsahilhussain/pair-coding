@@ -6,11 +6,13 @@
 .dakeMode {
   background-color: var(--textColor);
   color: var(--bgColor);
+  border-color: var(--bgColor);
 }
 
 .lightMode {
   background-color: var(--bgColor);
   color: var(--textColor);
+  border-color: var(--textColor);
 }
 
 .text-D,
