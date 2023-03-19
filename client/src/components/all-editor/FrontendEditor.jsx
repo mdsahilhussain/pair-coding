@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Editor from "../editor/Editor";
 import "./all-editor-models.css";
 
@@ -6,6 +6,19 @@ const FrontendEditor = ({ currFrontend }) => {
   const [hmtl, setHtml] = useState("");
   const [css, setCss] = useState("");
   const [js, setJs] = useState("");
+  const [srcDoc, setSrcDoc] = useState("");
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setSrcDoc(`
+      <html>
+      <body>${hmtl}</body>
+      <style>${css}</style>
+      <script>${js}</script>
+      </html>`);
+    }, 250);
+    return () => clearTimeout(timeout);
+  }, [hmtl, css, js]);
 
   return (
     <section className="all____editor--container">
@@ -36,7 +49,10 @@ const FrontendEditor = ({ currFrontend }) => {
         )}
       </section>
       <section className="all____editor--container___left">
-        <iframe title="This is a unique title" className="frontend-output" />
+        <iframe
+          srcDoc={srcDoc}
+          className="frontend-output"
+        />
       </section>
     </section>
   );
