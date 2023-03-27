@@ -49,10 +49,7 @@ const FrontendEditor = ({ currFrontend }) => {
         )}
       </section>
       <section className="all____editor--container___left">
-        <iframe
-          srcDoc={srcDoc}
-          className="frontend-output"
-        />
+        <iframe title="output" srcDoc={srcDoc} className="frontend-output" />
       </section>
     </section>
   );
