@@ -17,7 +17,7 @@ function App() {
             path="/"
             element={
               <>
-                <Navbar setMode={setMode} />, <Home />
+                <Navbar setMode={setMode} /> <Home />
               </>
             }
           ></Route>
