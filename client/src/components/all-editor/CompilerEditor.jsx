@@ -26,7 +26,7 @@ const CompilerEditor = ({ currEditor }) => {
         )}
       </section>
       <section className="all____editor--container___left compiler--left">
-        <label>input</label>
+        <label className="textarea-label">input</label>
         <textarea
           name=""
           id=""
@@ -35,7 +35,7 @@ const CompilerEditor = ({ currEditor }) => {
           data-gramm_editor="false"
           data-enable-grammarly="false"
         ></textarea>
-        <label>output</label>
+        <label className="textarea-label">output</label>
         <textarea
           name=""
           id=""

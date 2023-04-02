@@ -21,7 +21,7 @@ const InputFiled = (props) => {
 
   return (
     <div className="formInput">
-      <label>{label}</label>
+      <label className="input-label">{label}</label>
       <div className="inputField">
         <i
           className={`ri-${iconName}-fill`}

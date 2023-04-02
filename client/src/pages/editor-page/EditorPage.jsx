@@ -5,14 +5,14 @@ import {
   EditorNavbar,
   FrontendEditor,
 } from "../../components";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./editor-page-models.css";
 
 import logoImage from "../../assets/logo.png";
 const EditorPage = ({ setMode }) => {
   const location = useLocation();
+  const navigate = useNavigate();
   const { username } = location?.state;
-  console.log(username);
   const [currFrontend, setCurrFrontend] = useState("HTML");
   const [currEditor, setCurrEditor] = useState("CPP");
 
@@ -23,6 +23,11 @@ const EditorPage = ({ setMode }) => {
     { socketId: "3", username: "nivedita" },
     { socketId: "3", username: "nivedita" },
   ];
+
+  const leaveEditorHandler = () => {
+    localStorage.clear();
+    navigate("/", { replace: "true" });
+  };
 
   return (
     <section className="editorPage___container">
@@ -43,7 +48,10 @@ const EditorPage = ({ setMode }) => {
           </div>
         </div>
 
-        <div className="editorPage___container--right___button">
+        <div
+          className="editorPage___container--right___button"
+          onClick={leaveEditorHandler}
+        >
           <Button
             style={{
               padding: "0.8em 2em",

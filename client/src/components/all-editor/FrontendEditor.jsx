@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Editor from "../editor/Editor";
 import "./all-editor-models.css";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 const FrontendEditor = ({ currFrontend }) => {
-  const [hmtl, setHtml] = useState("");
-  const [css, setCss] = useState("");
-  const [js, setJs] = useState("");
+  const [hmtl, setHtml] = useLocalStorage("html", "");
+  const [css, setCss] = useLocalStorage("css", "");
+  const [js, setJs] = useLocalStorage("js", "");
   const [srcDoc, setSrcDoc] = useState("");
+  // const [consoleFeed, setConsoleFeed] = useState<consolefeed[]>([]);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -50,6 +52,9 @@ const FrontendEditor = ({ currFrontend }) => {
       </section>
       <section className="all____editor--container___left">
         <iframe title="output" srcDoc={srcDoc} className="frontend-output" />
+      </section>
+      <section>
+
       </section>
     </section>
   );

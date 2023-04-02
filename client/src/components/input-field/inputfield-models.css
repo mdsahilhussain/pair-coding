@@ -34,7 +34,7 @@ input::placeholder {
   color: var(--textColor);
 }
 
-label {
+.input-label {
   font-size: 0.8rem;
   color: var(--textColor);
 }
