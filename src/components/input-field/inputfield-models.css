@@ -1,0 +1,46 @@
+.formInput {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+
+.inputField {
+  padding: 0.8em;
+  margin: 0.8em 0em;
+  border-radius: 5px;
+  border: 1px solid var(--textColor);
+
+  display: flex;
+  align-items: center;
+}
+
+/* Todo
+.inputField:focus {
+  border: 1px solid transparent;
+  background-color: transparent;
+} */
+
+input {
+  border: none;
+  outline: none;
+  flex: 1;
+
+  background-color: transparent;
+  color: var(--bgColor);
+  font-size: 0.9rem;
+}
+
+input::placeholder {
+  color: var(--textColor);
+}
+
+.input-label {
+  font-size: 0.8rem;
+  color: var(--textColor);
+}
+
+.inputField i {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--textColor);
+}
