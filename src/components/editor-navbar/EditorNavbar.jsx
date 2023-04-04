@@ -5,7 +5,7 @@ import "./editor-navbar-models.css";
 import ClientList from "../client-list/ClientList";
 import Button from "../button/Button";
 import Toggle from "../toggle-button/Toggle";
-import { languageOptions } from "../../constants/languages";
+import currentLanguageOption from "../../constants/currentLanguages.json";
 
 function EditorNavbar({ list, setMode, onSelectLanguageHandler }) {
   const modeHandler = () => {
@@ -17,9 +17,9 @@ function EditorNavbar({ list, setMode, onSelectLanguageHandler }) {
       <div className="editor___container--navbar__IDE">
         <Select
           placeholder={`Filter By Category`}
-          options={languageOptions}
+          options={currentLanguageOption}
           className="language-dropdown"
-          defaultValue={languageOptions[0]}
+          defaultValue={currentLanguageOption[0]}
           onChange={(selectedOption) => onSelectLanguageHandler(selectedOption)}
         />
       </div>

@@ -1,4 +1,4 @@
-export const languageOptions = [
+export const BashlanguageOptions = [
     {
       id: 63,
       name: "JavaScript (Node.js 12.14.0)",

@@ -7,11 +7,7 @@ section.all____editor--container {
 }
 
 section.all____editor--container___right {
-  padding-left: 0.5em;
-
-  flex-grow: 1;
   flex-basis: 0;
-
   height: 100%;
 }
 
@@ -25,12 +21,17 @@ section.all____editor--container___left {
   height: 98%;
 }
 
-.compiler--left {
+.console,
+.compiler--input_output {
+  height: 100%;
+}
+
+.compiler--input_output {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 2em 3em;
+  padding: 1em 2em;
 }
 
 iframe,

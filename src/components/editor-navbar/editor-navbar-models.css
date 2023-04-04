@@ -17,18 +17,14 @@ nav.editor___container--navbar {
   margin-right: 1em;
 }
 
-.editor___container--navbar__IDE select {
-  width: 180px;
+.language-dropdown {
+  width: 250px;
   height: fit-content;
-  padding: 0.5em;
 
   outline: none;
   border: none;
 
-  border: 1px solid var(--textColor);
-  border-radius: 5px;
 }
-
 
 .editor___container--navbar___buttons {
   display: flex;

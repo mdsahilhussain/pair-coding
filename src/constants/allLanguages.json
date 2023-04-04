@@ -1,0 +1,226 @@
+[
+  {
+    "_id": 7,
+    "name": "C++ (GCC 9.2.0)",
+    "label": "C++ (GCC 9.2.0)",
+    "value": "cpp"
+  },
+  {
+    "_id": 6,
+    "name": "C (GCC 9.2.0)",
+    "label": "C (GCC 9.2.0)",
+    "value": "c"
+  },
+  {
+    "_id": 5,
+    "name": "Python (2.7.17)",
+    "label": "Python (2.7.17)",
+    "value": "python"
+  },
+  {
+    "_id": 4,
+    "name": "Java (OpenJDK 13.0.1)",
+    "label": "Java (OpenJDK 13.0.1)",
+    "value": "java"
+  },
+  {
+    "_id": 43,
+    "name": "Kotlin (1.3.70)",
+    "label": "Kotlin (1.3.70)",
+    "value": "Kotlin"
+  },
+
+  {
+    "_id": 17,
+    "name": "Javascript (Node.js 16.14.0)",
+    "label": "Javascript (Node.js 16.14.0)",
+    "value": "Javascript"
+  },
+  {
+    "_id": 60,
+    "name": "TypeScript (4.9.5)",
+    "label": "TypeScript (4.9.5)",
+    "value": "typeScript"
+  },
+  {
+    "_id": 1,
+    "name": "C# (Mono 6.6.0.161)",
+    "label": "C# (Mono 6.6.0.161)",
+    "value": "csharp"
+  },
+  {
+    "_id": 3,
+    "name": "F# (.NET Core SDK 3.1.202)",
+    "label": "F# (.NET Core SDK 3.1.202)",
+    "value": "fsharp"
+  },
+  {
+    "_id": 8,
+    "name": "Php (7.4.1)",
+    "label": "Php (7.4.1)",
+    "value": "php"
+  },
+  {
+    "_id": 11,
+    "name": "Haskell (GHC 8.8.1)",
+    "label": "Haskell (GHC 8.8.1)",
+    "value": "haskell"
+  },
+  {
+    "_id": 12,
+    "name": "Ruby (2.7.0)",
+    "label": "Ruby (2.7.0)",
+    "value": "ruby"
+  },
+  {
+    "_id": 13,
+    "name": "Perl (5.28.1)",
+    "label": "Perl (5.28.1)",
+    "value": "perl"
+  },
+  {
+    "_id": 14,
+    "name": "Lua (5.3.5)",
+    "label": "Lua (5.3.5)",
+    "value": "lua"
+  },
+
+  {
+    "_id": 15,
+    "name": "Assembly (NASM 2.14.02)",
+    "label": "Assembly (NASM 2.14.02)",
+    "value": "assembly"
+  },
+  {
+    "_id": 20,
+    "name": "Go ( go1.19.7)",
+    "label": "Go ( go1.19.7)",
+    "value": "go"
+  },
+  {
+    "_id": 21,
+    "name": "Scala (2.13.2)",
+    "label": "Scala (2.13.2)",
+    "value": "scala"
+  },
+  {
+    "_id": 30,
+    "name": "D",
+    "label": "D",
+    "value": "D"
+  },
+  {
+    "_id": 37,
+    "name": "Swift (5.2.3)",
+    "label": "Swift (5.2.3)",
+    "value": "swift"
+  },
+  {
+    "_id": 38,
+    "name": "Bash (5.0.0)",
+    "label": "Bash (5.0.0)",
+    "value": "bash"
+  },
+  {
+    "_id": 40,
+    "name": "Bash (OTP 22.2)",
+    "label": "Erlang (OTP 22.2)",
+    "value": "Erlang"
+  },
+  {
+    "_id": 41,
+    "name": "Elixir (1.9.4)",
+    "label": "Elixir (1.9.4)",
+    "value": "elixir"
+  },
+  {
+    "_id": 42,
+    "name": "Ocaml (4.09.0)",
+    "label": "Ocaml (4.09.0)",
+    "value": "ocaml"
+  },
+  {
+    "_id": 46,
+    "name": "Rust (1.40.0)",
+    "label": "Rust (1.40.0)",
+    "value": "rust"
+  },
+  {
+    "_id": 47,
+    "name": "Clojure (1.10.1)",
+    "label": "Clojure (1.10.1)",
+    "value": "clojure"
+  },
+  {
+    "_id": 48,
+    "name": "ATS",
+    "label": "ATS",
+    "value": "ATS"
+  },
+  {
+    "_id": 49,
+    "name": "Cobol (GnuCOBOL 2.2)",
+    "label": "Cobol (GnuCOBOL 2.2)",
+    "value": "cobol"
+  },
+  {
+    "_id": 50,
+    "name": "Coffeescript",
+    "label": "Coffeescript",
+    "value": "Coffeescript"
+  },
+  {
+    "_id": 51,
+    "name": "Crystal",
+    "label": "Crystal",
+    "value": "Crystal"
+  },
+  {
+    "_id": 52,
+    "name": "Elm",
+    "label": "Elm",
+    "value": "Elm"
+  },
+  {
+    "_id": 53,
+    "name": "Groovy (3.0.3)",
+    "label": "Groovy (3.0.3)",
+    "value": "groovy"
+  },
+  {
+    "_id": 54,
+    "name": "Idris",
+    "label": "Idris",
+    "value": "Idris"
+  },
+  {
+    "_id": 55,
+    "name": "Julia",
+    "label": "Julia",
+    "value": "Julia"
+  },
+  {
+    "_id": 56,
+    "name": "Mercury",
+    "label": "Mercury",
+    "value": "Mercury"
+  },
+  {
+    "_id": 57,
+    "name": "Nim",
+    "label": "Nim",
+    "value": "Nim"
+  },
+  {
+    "_id": 58,
+    "name": "Nix",
+    "label": "Nix",
+    "value": "Nix"
+  },
+  {
+    "_id": 59,
+    "name": "Raku",
+    "label": "Raku",
+    "value": "Raku"
+  }
+]

@@ -4,7 +4,7 @@ import Editor from "@monaco-editor/react";
 import { PostContext } from "../../context/PostContext";
 import { io } from "socket.io-client";
 import { useLocation, useParams } from "react-router-dom";
-const EditorC = ({ editorName, value, onChange, language }) => {
+const EditorC = () => {
   const { code, setCode, setJoinedUsers, selectedLanguage } =
     useContext(PostContext);
 
@@ -66,12 +66,10 @@ const EditorC = ({ editorName, value, onChange, language }) => {
 
   return (
     <section className="editor-x___container">
-      <h5 className="editor-x___container--title">{editorName}</h5>
       <Editor
-        className="editor"
+        className="controlled-editor"
         width="100%"
-        height="76vh"
-        language={selectedLanguage?.value || "javascript"}
+        language={selectedLanguage?.value || "C++"}
         theme="vs-dark"
         value={code}
         options={options}
