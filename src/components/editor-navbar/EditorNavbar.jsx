@@ -1,26 +1,27 @@
 import React from "react";
+import Select from "react-select";
+
 import "./editor-navbar-models.css";
 import ClientList from "../client-list/ClientList";
 import Button from "../button/Button";
 import Toggle from "../toggle-button/Toggle";
+import { languageOptions } from "../../constants/languages";
 
-function EditorNavbar({ list, setMode, setCurrEditor, currEditor }) {
+function EditorNavbar({ list, setMode, onSelectLanguageHandler }) {
   const modeHandler = () => {
     setMode((preMode) => !preMode);
-  };
-
-  const changeHandler = (e) => {
-    setCurrEditor(e.target.value);
   };
 
   return (
     <nav className="editor___container--navbar">
       <div className="editor___container--navbar__IDE">
-        <select name="IDE" value={currEditor} onChange={changeHandler}>
-          <option value="CPP">C++</option>
-          <option value="JAVA">JAVA</option>
-          <option value="FD">HTML,CSS, JavaScript</option>
-        </select>
+        <Select
+          placeholder={`Filter By Category`}
+          options={languageOptions}
+          className="language-dropdown"
+          defaultValue={languageOptions[0]}
+          onChange={(selectedOption) => onSelectLanguageHandler(selectedOption)}
+        />
       </div>
       <div className="editor___container--navbar___list">
         <ClientList list={list} />

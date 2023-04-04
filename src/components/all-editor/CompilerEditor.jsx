@@ -1,29 +1,12 @@
 import React, { useState } from "react";
-import Editor from "../editor/Editor";
+
+import EditorC from "../editor/Editor";
 import "./all-editor-models.css";
 const CompilerEditor = ({ currEditor }) => {
-  const [cpp, setCpp] = useState("");
-  const [java, setJava] = useState("");
-
   return (
     <section className="all____editor--container">
       <section className="all____editor--container___right compiler--right ">
-        {currEditor === "CPP" && (
-          <Editor
-            editorName="CPP"
-            language="text/x-c++src"
-            value={cpp}
-            onChange={setCpp}
-          />
-        )}
-        {currEditor === "JAVA" && (
-          <Editor
-            editorName="JAVA"
-            language="text/x-java"
-            value={java}
-            onChange={setJava}
-          />
-        )}
+        <EditorC />
       </section>
       <section className="all____editor--container___left compiler--left">
         <label className="textarea-label">input</label>
