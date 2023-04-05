@@ -27,14 +27,14 @@
     "_id": 43,
     "name": "Kotlin (1.3.70)",
     "label": "Kotlin (1.3.70)",
-    "value": "Kotlin"
+    "value": "kotlin"
   },
 
   {
     "_id": 17,
     "name": "Javascript (Node.js 16.14.0)",
     "label": "Javascript (Node.js 16.14.0)",
-    "value": "Javascript"
+    "value": "javascript"
   },
   {
     "_id": 60,

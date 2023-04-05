@@ -31,9 +31,8 @@ const EditorPage = ({ setMode }) => {
     navigate("/", { replace: "true" });
   };
 
-  const onSelectLanguageHandler = (sl) => {
-    console.log("selected Option...", sl);
-    setSelectedLanguage(sl);
+  const onSelectLanguageHandler = (currentLanguage) => {
+    setSelectedLanguage(currentLanguage);
   };
 
   return (

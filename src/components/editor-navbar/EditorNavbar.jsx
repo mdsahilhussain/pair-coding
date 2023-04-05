@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Select from "react-select";
 
 import "./editor-navbar-models.css";
@@ -6,10 +6,19 @@ import ClientList from "../client-list/ClientList";
 import Button from "../button/Button";
 import Toggle from "../toggle-button/Toggle";
 import currentLanguageOption from "../../constants/currentLanguages.json";
+import { PostContext } from "../../context/PostContext";
+import useFetch from "../../hooks/useFetch";
 
 function EditorNavbar({ list, setMode, onSelectLanguageHandler }) {
+  const { loading } = useContext(PostContext);
   const modeHandler = () => {
     setMode((preMode) => !preMode);
+  };
+
+  const { fetchOutput } = useFetch("https://code-compiler.p.rapidapi.com/v2");
+
+  const compileCodeHandler = () => {
+    fetchOutput();
   };
 
   return (
@@ -26,7 +35,10 @@ function EditorNavbar({ list, setMode, onSelectLanguageHandler }) {
       <div className="editor___container--navbar___list">
         <ClientList list={list} />
       </div>
-      <div className="editor___container--navbar___buttons">
+      <div
+        className="editor___container--navbar___buttons"
+        onClick={compileCodeHandler}
+      >
         <Button
           style={{
             padding: "0.8em 2em",
@@ -34,7 +46,7 @@ function EditorNavbar({ list, setMode, onSelectLanguageHandler }) {
             fontSize: "0.8rem",
             borderRadius: "5px",
           }}
-          title="Run"
+          title={loading ? "Compiling..." : "RUN"}
           isBlueButton={true}
         />
         <Toggle Handler={modeHandler} />

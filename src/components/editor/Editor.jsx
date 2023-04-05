@@ -69,7 +69,7 @@ const EditorC = () => {
       <Editor
         className="controlled-editor"
         width="100%"
-        language={selectedLanguage?.value || "C++"}
+        language={selectedLanguage?.value || "cpp"}
         theme="vs-dark"
         value={code}
         options={options}

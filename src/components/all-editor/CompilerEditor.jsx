@@ -4,8 +4,21 @@ import EditorC from "../editor/Editor";
 import "./all-editor-models.css";
 import { PostContext } from "../../context/PostContext";
 const CompilerEditor = () => {
-  const [isConsole, setIsConsole] = useState(true);
-  const { selectedLanguage } = useContext(PostContext);
+  const consoleSupportLanguages = [
+    "javascript",
+    "typeScript",
+    "coffeescript",
+    "dart",
+    "lua",
+  ];
+  const [isConsole, setIsConsole] = useState(false);
+  const { selectedLanguage, outputDetails, errorDetails } =
+    useContext(PostContext);
+
+  useEffect(() => {
+    setIsConsole(consoleSupportLanguages?.includes(selectedLanguage.value));
+  }, [selectedLanguage]);
+
 
   return (
     <section className="all____editor--container">
@@ -13,15 +26,17 @@ const CompilerEditor = () => {
         <EditorC />
       </section>
       <section className="all____editor--container___left ">
-        {!isConsole ? (
+        {isConsole ? (
           <div className="console">
-            <label></label>
+            <label className="textarea-label">console</label>
             <textarea
               name=""
               id=""
               data-gramm="false"
               data-gramm_editor="false"
               data-enable-grammarly="false"
+              style={errorDetails ? { color: "red" } : undefined}
+              defaultValue={outputDetails || errorDetails}
             ></textarea>
           </div>
         ) : (
@@ -42,6 +57,8 @@ const CompilerEditor = () => {
               data-gramm="false"
               data-gramm_editor="false"
               data-enable-grammarly="false"
+              style={errorDetails ? { color: "red" } : undefined}
+              defaultValue={outputDetails || errorDetails}
             ></textarea>
           </div>
         )}

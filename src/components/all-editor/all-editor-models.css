@@ -24,14 +24,15 @@ section.all____editor--container___left {
 .console,
 .compiler--input_output {
   height: 100%;
+  padding: 0.5em;
 }
 
 .compiler--input_output {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  padding: 1em 2em;
+  padding: 0.5em 1em;
 }
 
 iframe,
@@ -51,7 +52,6 @@ iframe {
 .textarea-label {
   font-size: 1rem;
   font-weight: 900;
-
   text-transform: uppercase;
   margin-bottom: 0.3em;
   color: var(--primaryColor);
@@ -59,7 +59,7 @@ iframe {
 
 textarea {
   width: 100%;
-  height: 48%;
+  height: 95%;
   color: var(--primaryColor);
   border: 2px solid var(--primaryColor);
   background-color: transparent;
