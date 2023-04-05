@@ -11,6 +11,14 @@ function useFetch(url) {
     setLoading,
   } = useContext(PostContext);
 
+  const consoleSupportLanguages = [
+    "javascript",
+    "typeScript",
+    "coffeescript",
+    "dart",
+    "lua",
+  ];
+
   const encodedParams = new URLSearchParams();
   encodedParams.append("LanguageChoice", selectedLanguage?._id || "7");
   encodedParams.append("Program", code);
@@ -30,14 +38,29 @@ function useFetch(url) {
     };
     try {
       const response = await axios.request(options);
+      console.log(response.data);
       setLoading(false);
+
       if (response.data?.Errors) {
         setErrorDetails(response.data?.Errors);
-        setOutputDetails(null);
+        if (!consoleSupportLanguages?.includes(selectedLanguage.value)) {
+          setOutputDetails("");
+        }
       }
+
       if (response.data?.Result) {
         setOutputDetails(response.data?.Result);
-        setErrorDetails(null);
+        if (!consoleSupportLanguages?.includes(selectedLanguage.value)) {
+          setErrorDetails("");
+        }
+      }
+
+      if (!response.data?.Errors) {
+        setErrorDetails("");
+      }
+
+      if (!response.data?.Result) {
+        setOutputDetails("");
       }
     } catch (error) {
       console.error(error);

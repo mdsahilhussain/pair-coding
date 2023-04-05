@@ -21,15 +21,17 @@ const Navbar = ({ setMode }) => {
         </div>
       </div>
       <div className="nav___right">
-        <Button
-          style={{
-            padding: "0.8em 2em",
-            marginRight: "1em",
-            fontSize: "0.8rem",
-          }}
-          title="Contact"
-          isBlueButton={true}
-        />
+        <a target="_blank" href="https://msahilhussain.netlify.app/contact">
+          <Button
+            style={{
+              padding: "0.8em 2em",
+              marginRight: "1em",
+              fontSize: "0.8rem",
+            }}
+            title="Contact"
+            isBlueButton={true}
+          />
+        </a>
         <Toggle Handler={modeHandler} />
       </div>
     </nav>

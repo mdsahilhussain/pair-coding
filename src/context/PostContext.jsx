@@ -6,8 +6,8 @@ export const PostContextProvider = ({ children }) => {
   const [code, setCode] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("");
   const [joinedUsers, setJoinedUsers] = useState([]);
-  const [outputDetails, setOutputDetails] = useState(null);
-  const [errorDetails, setErrorDetails] = useState(null);
+  const [outputDetails, setOutputDetails] = useState("");
+  const [errorDetails, setErrorDetails] = useState("");
   const [loading, setLoading] = useState(false);
 
   return (
