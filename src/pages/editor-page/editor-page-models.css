@@ -54,7 +54,6 @@ aside.editorPage___container--right {
   cursor: pointer;
 }
 
-
 .editorPage___container--right___button {
   width: 100%;
 
@@ -79,4 +78,15 @@ section.editorPage___container--left {
 .editorPage___container--left___editor {
   width: 100%;
   height: 100%;
+
+  display: flex;
+}
+
+.editorPage___message-box {
+  min-width: 250px;
+  height: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }

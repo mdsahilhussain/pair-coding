@@ -9,6 +9,7 @@ const InputFiled = (props) => {
     Handler,
     submitHandler,
     isShowPassword,
+    style,
     ...inputProps
   } = props;
 
@@ -20,7 +21,7 @@ const InputFiled = (props) => {
   };
 
   return (
-    <div className="formInput">
+    <div className="formInput" style={style}>
       <label className="input-label">{label}</label>
       <div className="inputField">
         <i

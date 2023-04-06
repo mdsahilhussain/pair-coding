@@ -7,6 +7,7 @@ import EditorNavbar from "./editor-navbar/EditorNavbar";
 import Editor from "./editor/Editor";
 import FrontendEditor from "./all-editor/FrontendEditor";
 import CompilerEditor from "./all-editor/CompilerEditor";
+import MessageBox from "./message-box/MessageBox";
 
 export {
   Navbar,
@@ -18,4 +19,5 @@ export {
   Editor,
   FrontendEditor,
   CompilerEditor,
+  MessageBox
 };

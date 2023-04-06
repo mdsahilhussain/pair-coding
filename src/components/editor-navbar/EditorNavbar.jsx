@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import Select from "react-select";
+import toast from "react-hot-toast";
 
 import "./editor-navbar-models.css";
 import ClientList from "../client-list/ClientList";
@@ -10,7 +11,7 @@ import { PostContext } from "../../context/PostContext";
 import useFetch from "../../hooks/useFetch";
 
 function EditorNavbar({ list, setMode, onSelectLanguageHandler }) {
-  const { loading } = useContext(PostContext);
+  const { loading, code } = useContext(PostContext);
   const modeHandler = () => {
     setMode((preMode) => !preMode);
   };
@@ -18,6 +19,9 @@ function EditorNavbar({ list, setMode, onSelectLanguageHandler }) {
   const { fetchOutput } = useFetch("https://code-compiler.p.rapidapi.com/v2");
 
   const compileCodeHandler = () => {
+    if (code === "") {
+      return toast.error("Please write something on editor");
+    }
     fetchOutput();
   };
 
@@ -49,7 +53,10 @@ function EditorNavbar({ list, setMode, onSelectLanguageHandler }) {
           title={loading ? "Compiling..." : "RUN"}
           isBlueButton={true}
         />
-        <Toggle Handler={modeHandler} />
+      </div>
+      <Toggle Handler={modeHandler} />
+      <div className="massege___toggle--button">
+        <i className="ri-chat-1-line"></i>
       </div>
     </nav>
   );

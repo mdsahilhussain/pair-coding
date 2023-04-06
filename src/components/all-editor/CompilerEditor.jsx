@@ -3,7 +3,7 @@ import React, { useState, useContext, useEffect } from "react";
 import EditorC from "../editor/Editor";
 import "./all-editor-models.css";
 import { PostContext } from "../../context/PostContext";
-import useFetch from "../../hooks/useFetch";
+
 const CompilerEditor = () => {
   const consoleSupportLanguages = [
     "javascript",
@@ -19,8 +19,6 @@ const CompilerEditor = () => {
   useEffect(() => {
     setIsConsole(consoleSupportLanguages?.includes(selectedLanguage.value));
   }, [selectedLanguage]);
-
-  // const consoleOutputDetails = outputDetails.concat(errorDetails);
 
   return (
     <section className="all____editor--container">
