@@ -5,9 +5,9 @@ import logoImage from "../../assets/logo.png";
 import Toggle from "../toggle-button/Toggle";
 import Button from "../button/Button";
 
-const Navbar = ({ setMode }) => {
+const Navbar = ({ setScreenMode }) => {
   const modeHandler = () => {
-    setMode((preMode) => !preMode);
+    setScreenMode((currentValue) => !currentValue);
   };
   return (
     <nav>

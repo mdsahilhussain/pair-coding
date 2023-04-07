@@ -11,7 +11,11 @@ import { PostContext } from "../../context/PostContext";
 import "./editor-page-models.css";
 
 import logoImage from "../../assets/logo.png";
-const EditorPage = ({ setMode }) => {
+const EditorPage = ({
+  setScreenMode,
+  isMessageBoxShow,
+  setIsMessageBoxShow,
+}) => {
   const location = useLocation();
   const navigate = useNavigate();
   const { username } = location?.state;
@@ -28,8 +32,6 @@ const EditorPage = ({ setMode }) => {
     { socketId: "3", username: "nivedita" },
   ];
 
-  const asider = true;
-
   const leaveEditorHandler = () => {
     localStorage.clear();
     navigate("/", { replace: "true" });
@@ -45,7 +47,7 @@ const EditorPage = ({ setMode }) => {
   return (
     <section className="editorPage___container">
       {/* //! A side menu  */}
-      {!asider && (
+      {!isMessageBoxShow && (
         <aside className="editorPage___container--right">
           <div className="editorPage___container--right___top">
             <div className="editorPage___container--right___top--image">
@@ -77,13 +79,14 @@ const EditorPage = ({ setMode }) => {
         <section className="editorPage___container--left___nav">
           <EditorNavbar
             list={userList}
-            setMode={setMode}
+            setScreenMode={setScreenMode}
+            setIsMessageBoxShow={setIsMessageBoxShow}
             onSelectLanguageHandler={onSelectLanguageHandler}
           />
         </section>
         <section className="editorPage___container--left___editor">
           <CompilerEditor />
-          {asider && (
+          {isMessageBoxShow && (
             <section className="editorPage___message-box">
               <MessageBox />
             </section>

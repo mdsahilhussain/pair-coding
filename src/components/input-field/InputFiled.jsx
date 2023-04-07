@@ -10,6 +10,7 @@ const InputFiled = (props) => {
     submitHandler,
     isShowPassword,
     style,
+    color,
     ...inputProps
   } = props;
 
@@ -28,7 +29,12 @@ const InputFiled = (props) => {
           className={`ri-${iconName}-fill`}
           style={{ marginRight: "0.5em" }}
         ></i>
-        <input {...inputProps} onChange={onChange} onKeyUp={enterHandler} />
+        <input
+          {...inputProps}
+          onChange={onChange}
+          onKeyUp={enterHandler}
+          style={{ color: color }}
+        />
         <span onClick={Handler} style={{ cursor: "pointer" }}>
           {props.name === "password" ? (
             isShowPassword ? (

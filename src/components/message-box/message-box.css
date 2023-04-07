@@ -9,12 +9,21 @@
   overflow-y: scroll;
 }
 
-.message___box--card  {
+.message___box--card {
   margin-bottom: 0.5em;
-  float: right;
+
+  width: 100%;
+  height: fit-content;
+  position: relative;
 }
 
-.message___box--card,
+.message___box--card > div {
+  width: fit-content;
+  height: fit-content;
+
+  position: absolute;
+}
+
 .message___box--card__massage {
   width: fit-content;
   max-width: 220px;
@@ -32,7 +41,7 @@
 .message___box--card__massage > h5 {
   font-size: 0.8rem;
 }
-.message___box--card > p {
+.message___box--card p {
   font-size: 0.7rem;
 }
 

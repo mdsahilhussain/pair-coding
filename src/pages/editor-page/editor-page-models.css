@@ -89,4 +89,6 @@ section.editorPage___container--left {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+
+  /* background-color: var(--primaryColor); */
 }

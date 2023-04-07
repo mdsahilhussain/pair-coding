@@ -8,24 +8,35 @@ import { EditorPage, Home } from "./pages";
 import { Navbar } from "./components";
 
 function App() {
-  const [mode, setMode] = useState(true);
+  const [screenMode, setScreenMode] = useState(true);
+  const [isMessageBoxShow, setIsMessageBoxShow] = useState(false);
 
   return (
     <PostContextProvider>
-      <div className={`App ${mode ? "lightMode" : "dakeMode"}`}>
+      <div className={`App ${screenMode ? "lightMode" : "dakeMode"}`}>
         <section>
           <Routes>
             <Route
               path="/"
               element={
                 <>
-                  <Navbar setMode={setMode} /> <Home />
+                  <Navbar
+                    screenMode={screenMode}
+                    setScreenMode={setScreenMode}
+                  />
+                  <Home />
                 </>
               }
             ></Route>
             <Route
               path="/editor/:id"
-              element={<EditorPage setMode={setMode} />}
+              element={
+                <EditorPage
+                  setScreenMode={setScreenMode}
+                  isMessageBoxShow={isMessageBoxShow}
+                  setIsMessageBoxShow={setIsMessageBoxShow}
+                />
+              }
             />
           </Routes>
         </section>

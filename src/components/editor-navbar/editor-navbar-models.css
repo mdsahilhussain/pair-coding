@@ -38,17 +38,5 @@ nav.editor___container--navbar {
   font-size: 2em;
   margin-left: 0.5em;
 
-  position: relative;
-}
-
-.massege___toggle--button::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  right: 2px;
-
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: red;
+  cursor: pointer;
 }

@@ -10,10 +10,20 @@ import currentLanguageOption from "../../constants/currentLanguages.json";
 import { PostContext } from "../../context/PostContext";
 import useFetch from "../../hooks/useFetch";
 
-function EditorNavbar({ list, setMode, onSelectLanguageHandler }) {
+function EditorNavbar({
+  list,
+  setScreenMode,
+  setIsMessageBoxShow,
+  onSelectLanguageHandler,
+}) {
   const { loading, code } = useContext(PostContext);
+
   const modeHandler = () => {
-    setMode((preMode) => !preMode);
+    setScreenMode((currentValue) => !currentValue);
+  };
+
+  const messageBoxShowHandler = () => {
+    setIsMessageBoxShow((currentValue) => !currentValue);
   };
 
   const { fetchOutput } = useFetch("https://code-compiler.p.rapidapi.com/v2");
@@ -55,7 +65,10 @@ function EditorNavbar({ list, setMode, onSelectLanguageHandler }) {
         />
       </div>
       <Toggle Handler={modeHandler} />
-      <div className="massege___toggle--button">
+      <div
+        className="massege___toggle--button noficationIndicater"
+        onClick={messageBoxShowHandler}
+      >
         <i className="ri-chat-1-line"></i>
       </div>
     </nav>
