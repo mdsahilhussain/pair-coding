@@ -5,13 +5,13 @@ import { PostContext } from "../../context/PostContext";
 import { io } from "socket.io-client";
 import { useLocation, useParams } from "react-router-dom";
 
-const socket = io("http://localhost:5173/");
+const socket = io("http://localhost:5000");
 const EditorC = () => {
   const { code, setCode, setJoinedUsers, selectedLanguage } =
     useContext(PostContext);
-    const location = useLocation();
-    const params = useParams();
-  
+  const location = useLocation();
+  const params = useParams();
+
   const options = {
     selectOnLineNumbers: true,
   };

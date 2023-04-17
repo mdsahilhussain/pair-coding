@@ -96,10 +96,10 @@ const FormField = () => {
       return;
     }
 
-    if (fromData.password !== unique_ID) {
-      toast.error("Your enter room id not match");
-      return;
-    }
+    // if (fromData.password !== unique_ID) {
+    //   toast.error("Your enter room id not match");
+    //   return;
+    // }
 
     playerRef.current.play();
 
